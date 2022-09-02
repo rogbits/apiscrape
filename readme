@@ -1,0 +1,24 @@
+golang api scraper experiment
+
+setup:
+- a core api (system of record)
+- a mgr that pulls location info from core and generates data fetching jobs
+  that can be processed by a horizontally scaling set of workers
+- workers fetch jobs from the mgr, query the core api, and
+  report back with ticket information to the manager for aggregation.
+
+tinkering:
+- each service dir (oapi, omgr, owrk) has a basic config file to tune some settings
+  related to generating and pulling data
+- with a couple of terminal windows open, something like:
+
+term 1:  docker-compose up --build oapi
+term 2:  docker-compose up --build omgr
+term 3:  docker-compose up --build owrk1
+term 4:  docker-compose up --build owrk2
+term 5:  docker-compose up --build owrk3
+term 6:  docker-compose up --build owrk4
+
+when scraping completes:
+- query the mgr for item counts: localhost:8080/1.0/locations/<location_id>
+* note the core api spits out some information about generated locations at the start..

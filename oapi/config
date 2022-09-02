@@ -1,0 +1,12 @@
+num_locations=5
+min_items_per_ticket=1
+max_items_per_ticket=5
+min_tickets_per_location=10000
+max_tickets_per_location=30000
+
+items:
+pasta meatballs hamburger smoothie spaghetti ribeye sub pizza shrimp_cocktail garlic_bread
+oreo_cookie vanilla_ice_cream french_fries lasagna omelette cheese_steak organic_cucumbers
+chicken_wings nachos dim_sum salmon_sushi udon_noodles swiss_cheese ramen taco risotto tots
+rigatoni avacado_toast chai_latte matcha banana_split chicken_noodle_soup dumplings broccoli
+mozzarella_sticks bagel grilled_cheese gyoza miso_soup mash_potatoes pork_sausage clams naan

@@ -1,0 +1,58 @@
+version: "3.9"
+services:
+  oapi:
+    build:
+      context: .
+      dockerfile: oapi/Dockerfile
+    ports:
+      - "8080"
+
+  omgr:
+    build:
+      context: .
+      dockerfile: omgr/Dockerfile
+    ports:
+      - "8080:8080"
+
+  # intentionally
+  # not using docker-compose scale
+  owrk1:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk2:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk3:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk4:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk5:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk6:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk7:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk8:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk9:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile
+  owrk10:
+    build:
+      context: .
+      dockerfile: owrk/Dockerfile

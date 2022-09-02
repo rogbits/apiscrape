@@ -1,0 +1,3 @@
+oapi_batch_size=2
+oapi_concurrent_requests=5
+job_window_in_minutes=60
